@@ -13,6 +13,13 @@
       --radius:14px;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
+
+    /* ZMIANA: linki na białe */
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:linear-gradient(180deg,#071024 0%, #07192b 100%);color:#e6eef6}
     .wrap{max-width:var(--max-width);margin:28px auto;padding:28px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 30px rgba(2,6,23,0.6)}
@@ -23,38 +30,31 @@
     .grid{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:24px}
     @media (max-width:880px){.grid{grid-template-columns:1fr}.photo{width:96px;height:96px}}
 
-    /* left column */
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
     section + section{margin-top:16px}
     .section-title{font-weight:600;margin-bottom:10px}
     p.lead{margin:0;color:var(--muted)}
 
-    /* skills */
     .skills{display:flex;flex-wrap:wrap;gap:8px}
     .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
 
-    /* timeline */
     .job{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
     .job:last-child{border-bottom:0}
     .job h4{margin:0;font-size:16px}
     .job .meta{color:var(--muted);font-size:13px}
     .job p{margin:8px 0 0;color:var(--muted);font-size:14px}
 
-    /* projects */
     .projects{display:grid;gap:12px}
     .proj{padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
     .proj a{color:inherit;text-decoration:none}
     .proj .tag{font-size:12px;color:var(--muted)}
 
-    /* right column */
     .contact{display:flex;flex-direction:column;gap:8px}
     .contact a{color:inherit;text-decoration:none}
     .mini{font-size:13px;color:var(--muted)}
 
-    /* footer */
     footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
 
-    /* print support */
     @media print{
       body{background:white;color:black}
       .wrap{box-shadow:none;border-radius:0}
@@ -76,7 +76,7 @@
       <div>
         <section class="card">
           <div class="section-title">O mnie</div>
-          <p class="lead">Krótki, 2–4 zdaniowy opis — co robisz, jakie technologie znasz i jaki typ projektów szukasz. Np. "Jestem frontend developerem z 4-letnim doświadczeniem w React i TypeScript. Lubię tworzyć szybkie, dostępne interfejsy i pracować nad open source."</p>
+          <p class="lead">Krótki, 2–4 zdaniowy opis — co robisz, jakie technologie znasz i jaki typ projektów szukasz.</p>
         </section>
 
         <section class="card">
@@ -85,7 +85,7 @@
           <article class="job">
             <h4>[Stanowisko] — [Firma]</h4>
             <div class="meta">MM.YYYY — obecnie · [Miasto]</div>
-            <p>Krótki opis obowiązków i osiągnięć. Wypunktuj 2–4 rzeczy: np. "Zbudowałem komponentowy system UI używając React + Tailwind; poprawiłem wydajność ładowania o 30%"</p>
+            <p>Krótki opis obowiązków i osiągnięć.</p>
           </article>
 
           <article class="job">
@@ -100,7 +100,7 @@
           <div class="job">
             <h4>[Kierunek] — [Uczelnia]</h4>
             <div class="meta">MM.YYYY — MM.YYYY</div>
-            <p class="mini">Krótka informacja, np. specjalizacja, praca dyplomowa.</p>
+            <p class="mini">Krótka informacja.</p>
           </div>
         </section>
 
@@ -109,7 +109,7 @@
           <div class="projects">
             <div class="proj">
               <div style="display:flex;justify-content:space-between;align-items:center"><strong><a href="#">Nazwa Projektu</a></strong><span class="tag">· GitHub</span></div>
-              <div class="mini">Krótki opis projektu, użyte technologie i rola. Dodaj link i akronimy: np. React · Node · TypeScript</div>
+              <div class="mini">Krótki opis projektu.</div>
             </div>
 
             <div class="proj">
@@ -139,7 +139,7 @@
         <div class="card contact">
           <div class="section-title">Kontakt</div>
           <div class="mini">✉️ <a href="mailto:email@example.com">email@example.com</a></div>
-          <div class="mini">🔗 <a href="https://github.com/twoj-login" target="_blank" rel="noopener">github.com/twoj-login</a></div>
+          <div class="mini">🔗 <a href="#">github.com/twoj-login</a></div>
           <div class="mini">💼 <a href="#">linkedin.com/in/twoj-login</a></div>
           <div class="mini">☎️ +48 123 456 789</div>
         </div>
@@ -167,7 +167,5 @@
       Zbudowane z ❤️ · <a href="https://github.com/Dominqd98" target="_blank" rel="noopener">github.com/twoj-login/repo</a>
     </footer>
   </main>
-
-  <!-- Instrukcja: skopiuj ten plik do repo o nazwie username.github.io lub umieść w branch gh-pages, edytuj pola w nawiasach kwadratowych -->
 </body>
 </html>
