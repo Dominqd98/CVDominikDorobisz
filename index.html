@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="CV — [Twoje Imię i Nazwisko]" />
+  <title>[Twoje Imię i Nazwisko] — CV</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --max-width:1100px;
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071024 0%, #07192b 100%);color:#e6eef6}
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:28px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    header{display:flex;gap:20px;align-items:center}
+    .photo{width:120px;height:120px;border-radius:16px;overflow:hidden;background:var(--glass);flex:0 0 120px;border:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--muted)}
+    h1{margin:0;font-size:28px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:24px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.photo{width:96px;height:96px}}
+
+    /* left column */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    section + section{margin-top:16px}
+    .section-title{font-weight:600;margin-bottom:10px}
+    p.lead{margin:0;color:var(--muted)}
+
+    /* skills */
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+
+    /* timeline */
+    .job{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+    .job:last-child{border-bottom:0}
+    .job h4{margin:0;font-size:16px}
+    .job .meta{color:var(--muted);font-size:13px}
+    .job p{margin:8px 0 0;color:var(--muted);font-size:14px}
+
+    /* projects */
+    .projects{display:grid;gap:12px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
+    .proj a{color:inherit;text-decoration:none}
+    .proj .tag{font-size:12px;color:var(--muted)}
+
+    /* right column */
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .contact a{color:inherit;text-decoration:none}
+    .mini{font-size:13px;color:var(--muted)}
+
+    /* footer */
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* print support */
+    @media print{
+      body{background:white;color:black}
+      .wrap{box-shadow:none;border-radius:0}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="photo">[Twoje zdjęcie]</div>
+      <div>
+        <h1>[Twoje Imię i Nazwisko]</h1>
+        <div class="subtitle">[Tytuł zawodowy — np. Frontend Developer · Inżynier oprogramowania]</div>
+        <div class="mini" style="margin-top:8px">📍 [Miasto, Kraj] · ✉️ <a href="mailto:email@example.com">email@example.com</a> · 🔗 <a href="#">github.com/twoj-login</a></div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <section class="card">
+          <div class="section-title">O mnie</div>
+          <p class="lead">Krótki, 2–4 zdaniowy opis — co robisz, jakie technologie znasz i jaki typ projektów szukasz. Np. "Jestem frontend developerem z 4-letnim doświadczeniem w React i TypeScript. Lubię tworzyć szybkie, dostępne interfejsy i pracować nad open source."</p>
+        </section>
+
+        <section class="card">
+          <div class="section-title">Doświadczenie</div>
+
+          <article class="job">
+            <h4>[Stanowisko] — [Firma]</h4>
+            <div class="meta">MM.YYYY — obecnie · [Miasto]</div>
+            <p>Krótki opis obowiązków i osiągnięć. Wypunktuj 2–4 rzeczy: np. "Zbudowałem komponentowy system UI używając React + Tailwind; poprawiłem wydajność ładowania o 30%"</p>
+          </article>
+
+          <article class="job">
+            <h4>[Stanowisko] — [Firma]</h4>
+            <div class="meta">MM.YYYY — MM.YYYY · [Miasto]</div>
+            <p>Opis drugi.</p>
+          </article>
+        </section>
+
+        <section class="card">
+          <div class="section-title">Edukacja</div>
+          <div class="job">
+            <h4>[Kierunek] — [Uczelnia]</h4>
+            <div class="meta">MM.YYYY — MM.YYYY</div>
+            <p class="mini">Krótka informacja, np. specjalizacja, praca dyplomowa.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">Projekty (wybrane)</div>
+          <div class="projects">
+            <div class="proj">
+              <div style="display:flex;justify-content:space-between;align-items:center"><strong><a href="#">Nazwa Projektu</a></strong><span class="tag">· GitHub</span></div>
+              <div class="mini">Krótki opis projektu, użyte technologie i rola. Dodaj link i akronimy: np. React · Node · TypeScript</div>
+            </div>
+
+            <div class="proj">
+              <strong><a href="#">Inny Projekt</a></strong>
+              <div class="mini">Opis.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">Umiejętności</div>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Git</span>
+            <span class="skill">CI/CD</span>
+          </div>
+        </section>
+
+      </div>
+
+      <aside>
+        <div class="card contact">
+          <div class="section-title">Kontakt</div>
+          <div class="mini">✉️ <a href="mailto:email@example.com">email@example.com</a></div>
+          <div class="mini">🔗 <a href="https://github.com/twoj-login" target="_blank" rel="noopener">github.com/twoj-login</a></div>
+          <div class="mini">💼 <a href="#">linkedin.com/in/twoj-login</a></div>
+          <div class="mini">☎️ +48 123 456 789</div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">Języki</div>
+          <div class="mini">Polski — ojczysty</div>
+          <div class="mini">Angielski — B2/C1</div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">Certyfikaty</div>
+          <div class="mini">[Nazwa certyfikatu] — [Organizacja] · MM.YYYY</div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">Szybkie linki</div>
+          <div class="mini">Resume (PDF) — <a href="#">Pobierz</a></div>
+          <div class="mini">Portfolio — <a href="#">Strona</a></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Zbudowane z ❤️ · <a href="https://github.com/twoj-login/repo" target="_blank" rel="noopener">github.com/twoj-login/repo</a>
+    </footer>
+  </main>
+
+  <!-- Instrukcja: skopiuj ten plik do repo o nazwie username.github.io lub umieść w branch gh-pages, edytuj pola w nawiasach kwadratowych -->
+</body>
+</html>
